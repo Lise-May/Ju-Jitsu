@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HØST IF | Ju Jitsu</title>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/gxl5oze.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- ====================================== Navigation ====================================== -->
+    <!--Skrevet af Lise-May og Chalotte -->
+    <header>
+        <nav class="navbar">
+            <a href="#/" class="nav-branding"><img src="img/logo.png" alt="#/"></a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#/" class="nav-link current">Forside</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#/a_good_start" class="nav-link">En god start</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#/practical_information" class="nav-link">Praktisk info</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#/404" class="nav-link">Om os</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#/medlemmer" class="nav-link">For medlemmer</a>
+                </li>
+            </ul>
+
+            <a href="https://xn--hstif-vua.dk/ju-jitsu "><button id="tilmeld-knap"
+                    class="lil-button hide">Tilmeld</button></a>
+
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+
+    <!-- ====================================== Landing Page ====================================== -->
+    <!--Skrevet af Line, Lise-May og Chalotte -->
+        <section id="home" class="page home_page">
+            <video class="landing-video-mobile" src="img/landing-video-mobile.mp4" autoplay muted loop></video>
+            <video class="landing-video-desktop" src="img/landing-desk.mp4" autoplay muted loop></video>
+            <img class="redbox" src="img/redbox.png" alt="red box">
+
+            <article class="headline">
+                <h2 class="h2_left">HØST IF</h2>
+                <h1>Ju Jitsu</h1>
+                <p class="subliner">Selvforsvar gennem <br> sjov og varieret træning</p>
+                <p class="subliner-desktop">Velkommen til HØST IF Ju Jitsu, hvor du kan lære at beskytte dig selv
+                    igennem faldteknik, frigørelsesteknikker og kontrolteknikker, fra oprejst, siddende og liggende
+                    position, i bevægelse, imod angribere der er større og stærkere end dig selv.</p>
+            </article>
+
+            <article>
+                <h2 class="h2-black">Vores hold</h2>
+                <div class="hold">
+                    <div>
+                        <a href="#/404"><img class="hold-billeder" src="img/barnshold.png" alt="ju jitsu"></a>
+                        <h3 class="holdnavn">Børnehold <br> 6-13 år</h2>
+                    </div>
+                    <div>
+                        <a href="#/404"><img class="hold-billeder" src="img/ungdomshold.png" alt="ju jitsu"></a>
+                        <h3 class="holdnavn">Ungdomshold <br> 14-15 år</h3>
+                    </div>
+                    <div>
+                        <a href="#/404"><img class="hold-billeder" src="img/voksenhold.png" alt="ju jitsu"></a>
+                        <h3 class="holdnavn">Voksenhold <br> 16+ år</h3>
+                    </div>
+                </div>
+            </article>
+
+            <article class="home_good_start">
+                <h2 class="h2-black mobile-headline">Få en god start</h2>
+                <img class="billeder-phone" src="img/goStart.jpg" alt="ju jitsu undervisning">
+                <img class="billeder-desktop" src="img/goStartDesk.png" alt="ju jitsu undervisning">
+                <div class="text_right_of_img">
+                    <h2 class="h2-black">Få en god start</h2>
+                    <p>Udfordre dig selv og prøv noget der vil gøre en positiv forskel! Du behøver ingen forkundskaber,
+                        blot
+                        et par træningsbukser og en t-shirt. Vi gør det nemt for dig.
+                    </p>
+                    <button type="button" onclick="navigateTo('#/a_good_start')">Se mere</button>
+                </div>
+                </div>
+            </article>
+
+            <article class="home_about_club">
+                <h2 class="h2-black mobile-headline">Om klubben</h2>
+                <img class="billeder-phone" src="img/belt.jpg" alt="ju jitsu undervisning">
+                <img class="billeder-desktop img-right-desktop" src="img/omKlubbenDesk.png" alt="ju jitsu undervisning">
+                <div class="text_left_of_img">
+                    <h2 class="h2-black">Om klubben</h2>
+                    <p>Hos os går vi ikke så meget op i stævner, men meget mere op i kampsporten selv. <br>
+                        Vi har siden 2010 trænet store som små efter den norske model. <br>
+                        Gradueringspensumet udviklet af Ju Jitsu Norge er efter vores bedste overbevisning den mest
+                        dækkende
+                        form for Ju Jitsu.
+                    </p>
+                    <button type="button" onclick="navigateTo('#/404')">Se mere</button>
+                </div>
+            </article>
+
+            <article class="home_trial_training">
+                <h2 class="h2-black mobile-headline">Prøvetræning</h2>
+                <img class="billeder-phone" src="img/tryout.jpg" alt="ju jitsu undervisning">
+                <img class="billeder-desktop" src="img/tryoutDesk.png" alt="ju jitsu undervisning">
+                <div class="text_right_of_img">
+                    <h2 class="h2-black">Prøvetræning</h2>
+                    <p>Har du lyst til at prøve kræfter med Ju Jitsu? <br> Vi tilbyder selvfølgelig en udforpligtende og
+                        gratis prøvetræning.
+                    </p>
+                    <button type="button" onclick="navigateTo('#/practical_information')">Se mere</button>
+                </div>
+            </article>
+
+            <article class="home_for_members">
+                <h2 class="h2-black mobile-headline">For medlemmer</h2>
+                <img class="billeder-phone" src="img/forMedlemmer.jpg" alt="ju jitsu undervisning">
+                <img class="billeder-desktop img-right-desktop" src="img/forMedlemmerDesk.png"
+                    alt="ju jitsu undervisning">
+                <div class="text_left_of_img">
+                    <h2 class="h2-black">For medlemmer</h2>
+                    <p>Log ind og følg din udvikling, læs pensum og hold dig opdateret med nyheder i klubben.</p>
+                    <button type="button" onclick="navigateTo('#/medlemmer')">Log in</button>
+                </div>
+            </article>
+
+        </section>
+
+  <!-- ====================================== Login Page ====================================== -->
+    <!--Skrevet af Lise-May -->
+
+        <section id="login" class="page">
+            <h1 class="center">Log in</h1>
+            <p class="p_center">Det er først muligt at logge ind og se flere informationer når man er tilmeldt et hold
+            </p><br><br>
+            <div id="firebaseui-auth-container"></div>
+        </section>
+
+    <!-- ====================================== Medlemmer Page ====================================== -->
+    <!--Skrevet af Line, Lise-May og Chalotte -->
+
+        <section id="medlemmer" class="page page_members">
+            <h1 class="h2-black">Hej</h1>
+            <article class="members_welcome_message">
+                <p class="p_width_welcome">Dette er en side kun for medlemmere, her kan du se hvor langt du er i bælte
+                    ligaen, og se hvor langt du har til sort bælte.<br><br>
+                    Du kan også se alle nyhederne her, som også er på vores facebook.<br><br>
+                    Pensummet finder du også her på siden, så du kan se hvad du skal kunne til det næste bælte og meget
+                    mere.</p>
+            </article>
+
+            <article id="belt-liga" class="belt-liga">
+                <h2>Bælte ligaen</h2>
+                <div class="belt-grid">
+                    <div class="belt-display">
+                        <img class="beltdisplay-pic" src="img/beltdisplay.png" alt="ju jitsu bælteskala">
+                    </div>
+                    <div class="black-belt"></div>
+                    <div class="brown-belt"></div>
+                    <div class="blue-belt"></div>
+                    <div class="green-belt"></div>
+                    <div class="orange-belt"></div>
+                    <div class="yellow-belt"></div>
+                    <div class="white-belt">
+                        <div>
+                            <img class="user_belt_liga" src="img/placeholder.png">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="members_news" class="members_news">
+                <h2>Nyheder</h2>
+                <div class="p_width_news">
+                    <p class="p_center p_mellemrum">Se alle nyhederne på vores facebook.</p>
+                    <p>Vi sender også beskeder ud på SMS til det registrerede tlf. der blev oplsyt ved tilmelding, med
+                        besked om eks. aflyste træninger eller lignende.</p>
+                </div>
+            </article>
+
+            <article class="facebook">
+                <div id="fb-root">
+                    <div class="fb-page" data-href="https://www.facebook.com/hadbjergjujitsu/" data-tabs="timeline"
+                        data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/hadbjergjujitsu/" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/hadbjergjujitsu/">HØST IF Ju Jitsu</a></blockquote>
+                    </div>
+                    <script async defer crossorigin="anonymous"
+                        src="https://connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v12.0" nonce="evx6d7gU"></script>
+                </div>
+            </article>
+
+            <article id="members_pensum" class="members_pensum">
+                <h2>Pensum</h2>
+                <p class="p_center p_mellemrum">Klik på download for at downloade pensum.</p>
+                <section class="members_pensum_btn">
+                    <button type="button" id="btn-adult" class="active-btn">Voksne</button>
+                    <button type="button" id="btn-children">Børn</button>
+                </section>
+                <section class="members_pensum_belts">
+                    <div id="adult_pensum">
+                        <div class="belt_adult">
+                            <a href="img/BASISTEKNIKKER-JJN-Ju-jitsu.pdf" download><img class="belt" src="img/white.png"
+                                    alt="Ju Jitsu hvidt bælte"><button class="btn_download_pensum">Download</button></a>
+                            <a href="img/5-kyu-GULT-BELTE.pdf" download><img class="belt" src="img/yellow.png"
+                                    alt="Ju Jitsu gult bælte"><button class="btn_download_pensum">Download</button></a>
+                            <a href="img/4-kyu-orange-belte.pdf" download><img class="belt" src="img/orange.png"
+                                    alt="Ju Jitsu orange bælte"><button
+                                    class="btn_download_pensum">Download</button></a>
+                            <a href="img/3-kyu-grønt-belte.pdf" download><img class="belt" src="img/green.png"
+                                    alt="Ju Jitsu grønt bælte"><button class="btn_download_pensum">Download</button></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt" src="img/blue.png"
+                                    alt="Ju Jitsu blåt bælte"><button class="btn_download_pensum">Download</button></a>
+                            <a href="img/1-kyu-Brunt-belte.pdf" download><img class="belt" src="img/brown.png"
+                                    alt="Ju Jitsu brunt bælte"><button class="btn_download_pensum">Download</button></a>
+                            <a><img class="belt" src="img/black.png" alt="Ju Jitsu sort bælte"><button
+                                    class="btn_download_pensum">Få af træner</button></a>
+                        </div>
+                    </div>
+                    <div id="children_pensum">
+                        <div class="belt_children">
+                            <a href="img/1_WBP_Ålesund.pdf" download><img class="belt" src="img/white.png"
+                                    alt="Ju Jitsu junior hvidt bælte"><button
+                                    class="btn_download_pensum">Download</button></a>
+                            <a href="img/1_WBP_Ålesund.pdf" download><img class="belt" src="img/white-junior-1-line.png"
+                                    alt="Ju Jitsu junior hvid 1 streg bælte"><button
+                                    class="btn_download_pensum">Download</button></a>
+                            <a href="img/1_WBP_Ålesund.pdf" download><img class="belt"
+                                    src="img/white -junior-2-line.png"
+                                    alt="Ju Jitsu  junior hvidt 1 streger bælte"><button
+                                    class="btn_download_pensum">Download</button></a>
+                            <a href="img/1_WBP_Ålesund.pdf" download><img class="belt" src="img/yellow-junior.png"
+                                    alt="Ju Jitsu junior gult bælte"><button
+                                    class="btn_download_pensum">Download</button></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                    src="img/yellow-junior-1-line.png" alt="Ju Jitsu junior gult 1 streg bælte"><button
+                                    class="btn_download_pensum">Download</button></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                    src="img/yellow-junior-2-line.png"
+                                    alt="Ju Jitsu junior gult 2 streger bælte"><button
+                                    class="btn_download_pensum">Download</button></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                    src="img/orange-juniorpng.png" alt="Ju Jitsu junior orange bælte"><button
+                                    class="btn_download_pensum">Download</button></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                    src="img/orange-junior-1-line.png"
+                                    alt="Ju Jitsu junior orange 1 streg bælte"><button
+                                    class="btn_download_pensum">Download</button></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                    src="img/orange-junior-2-line.png"
+                                    alt="Ju Jitsu junior orange 2 streger bælte"><button
+                                    class="btn_download_pensum">Download</button></a>
+                            <div id="belt_childrent_hide">
+                                <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                        src="img/green-junior.png" alt="Ju Jitsu junior grønt bælte"><button
+                                        class="btn_download_pensum">Download</button></a>
+                                <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                        src="img/green-junior-1-line.png"
+                                        alt="Ju Jitsu junior grønt 1 streg bælte"><button
+                                        class="btn_download_pensum">Download</button></a>
+                                <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                        src="img/green-junior-2-line.png"
+                                        alt="Ju Jitsu junior grønt 2 streger bælte"><button
+                                        class="btn_download_pensum">Download</button></a>
+                                <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                        src="img/blue-junior.png" alt="Ju Jitsu junior blåt bælte"><button
+                                        class="btn_download_pensum">Download</button></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/blue-junior-1-line.png"
+                                        alt="Ju Jitsu junior blåt 1 streg bælte"><button
+                                        class="btn_download_pensum">Download</button></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/blue-junior-2-line.png"
+                                        alt="Ju Jitsu junior blåt 2 streger bælte"><button
+                                        class="btn_download_pensum">Download</button></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/brown-junior.png" alt="Ju Jitsu junior brunt bælte"><button
+                                        class="btn_download_pensum">Download</button></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/brown-junior-1-line.png"
+                                        alt="Ju Jitsu junior brunt 1 streg bælte"><button
+                                        class="btn_download_pensum">Download</button></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/brown-junior-2-line.png"
+                                        alt="Ju Jitsu junior brunt 2 streger bælte"><button
+                                        class="btn_download_pensum">Download</button></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/brown-2-junior.png" alt="Ju Jitsu junior 2 brunt bælte"><button
+                                        class="btn_download_pensum">Download</button></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/brown-2-junior-1-line.png"
+                                        alt="Ju Jitsu junior 2 brunt 1 streg bælte"><button
+                                        class="btn_download_pensum">Download</button></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/brown-2-junior-2-line.png"
+                                        alt="Ju Jitsu junior 2 brunt 2 streger bælte"><button
+                                        class="btn_download_pensum">Download</button></a>
+                                <a><img class="belt" src="img/black-junior.png" alt="Ju Jitsu junior sort bælte"><button
+                                        class="btn_download_pensum">få af træner</button></a>
+                                <a><img class="belt" src="img/black-2-junior.png"
+                                        alt="Ju Jitsu junior 2 sort bælte"><button class="btn_download_pensum">få af
+                                        træner</button></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <article id="members_tie_belt" class="members_tie_belt">
+                <h2 class="tie_belt_h2">Hvordan binder man bæltet?</h2>
+                <video class="members_video_tie_belt" controls>
+                    <source src="img/belt-video.mp4" type="video/mp4">
+                </video>
+            </article>
+
+            <article class="members_bottm">
+                <button id="btn-logout">Log ud</button>
+                <button id="to-top">Tilbage til toppen</button>
+                <a href="#/profile"><img class="edit_button" src="img/rediger_profil.png" alt="Rediger profil knap"></a>
+
+                <ul class="left_naviagtin_page nav-container">
+                    <li class="left-nav">
+                        <a href="#belt-liga" class="laft-nav-link">Bælte ligaen</a>
+                    </li>
+                    <li class="left-nav">
+                        <a href="#members_news" class="laft-nav-link">Nyheder</a>
+                    </li>
+                    <li class="left-nav">
+                        <a href="#members_pensum" class="laft-nav-link">Pensum</a>
+                    </li>
+                    <li class="left-nav">
+                        <a href="#members_tie_belt" class="laft-nav-link">Bind dit bælte</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+    <!-- ====================================== Profil ====================================== -->
+    <!--Skrevet af Lise-May  -->
+
+        <section id="profile" class="page">
+            <h2>Rediger profil</h2>
+            <form class="form">
+                <img id="imagePreview" class="image-preview">
+                <input class="select_image" type="file" id="imgFile" accept="image/*"
+                    onchange="previewImage(this.files[0], 'imagePreview')">
+                <p id="form_img_tekst">Vær opmærksom på at det valgte billede, er det billede der bliver vist ved bælte
+                    ligaen</p>
+                <input class="form_fill_text" type="text" id="name" placeholder="Dit fulde navn" required>
+                <input class="form_fill_text" type="email" id="mail" placeholder="Din e-mail" required>
+                <input class="form_fill_text" type="number" id="phone" placeholder="Dit telefonnummer" required>
+                <input class="form_fill_text" type="text" id="beltType" placeholder="Vælg din bælte type" required>
+
+                <button type="button" name="button" onclick="updateUser()">Gem</button>
+            </form>
+            <a href="#/medlemmer"><img class="back_members_btn" src="img/down.svg" alt="tilbage til medlemmer"></a>
+        </section>
+
+        <!-- ====================================== En god start Page ====================================== -->
+    <!--Skrevet af Line, Lise-May og Chalotte -->
+
+        <section id="a_good_start" class="page page_underside">
+            <h1 class="center">En god start</h1>
+            <article id="so_easy" class="article_top_underside article_underside">
+                <img class="billeder-phone" src="img/nemtMobile.jpg" alt="ju jitsu undervisning">
+                <img class="billeder-desktop" src="img/nemt.png" alt="ju jitsu undervisning">
+                <img class="redbox redbox_phone" src="img/redbox.png" alt="red box">
+                <div class="headline underside_img_text">
+                    <h2 class="h2_left">Så nemt er det</h2>
+                    <p>“Tryghed, selvtillid og motion“</p>
+                </div>
+                <div class="underside_text_box">
+                    <div class="underside_text_box_left">
+                        <p>Alle kan træne ju jitsu, uafhængig af køn og alder.
+                            Du behøver ingen forkundskaber, <br>- blot et par træningsbukser og en t-shirt. <br><br>
+                            Ju jitsu er en sportsgren med et individuelt fokus på den enkelte udøver, og er et godt
+                            alternativ til traditionel holdidræt.
+                            Igennem bæltesystemet kan man udfordre sig selv i forhold til ens egne forudsætninger, og
+                            stadigvæk opleve mestring og præstation,
+                            uden at være tvunget til at konkurrere imod andre.
+                        </p>
+                    </div>
+                    <div class="underside_text_box_right">
+                        <p> Dog er træningen meget social, og du kommer tæt på andre mennesker i et positivt
+                            træningsmiljø med sammenhold og respekt. <br><br>
+                            Udfordre dig selv og prøv noget der vil gøre en positiv forskel for både krop og sjæl! Så
+                            hvad er vigtigst? At have det sjovt eller lære noget? <br>
+                            - Vi mener at man lær bedst når det er sjovt, derfor er du altid velkomme til prøvetræning.
+                            Vi glæder os til at se dig.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article id="advantage" class="article_underside">
+                <img class="billeder-phone" src="img/fordeleMobil.jpg" alt="ju jitsu undervisning">
+                <img class="billeder-desktop" src="img/fordele.png" alt="ju jitsu undervisning">
+                <img class="redbox redbox_phone" src="img/redbox.png" alt="red box">
+                <div class="headline underside_img_text">
+                    <h2 class="h2_left">Fordele</h2>
+                    <p>“Alsidig kampsport“</p>
+                </div>
+                <div class="underside_text_box">
+                    <div class="underside_text_box_left">
+                        <p>Du lærer at beskytte dig selv igennem faldteknik, frigørelsesteknikker og kontrolteknikker,
+                            fra oprejst, siddende og liggende position, i bevægelse,
+                            imod angribere der er større og stærkere end dig selv. I ju jitsu træner man kast og
+                            nedtagninger, slag og spark, frigørelser, undvigelser og
+                            forsvar imod en stor variation af angreb.<br><br>
+                            Som kampsport er ju jitsu meget alsidig. <br>
+                            Som selvforsvar er det meget anvendelig. <br>
+                            Som træningsform giver det balance, kropskoordination, bevægelighed, styrke og godt humør!
+                        </p>
+                    </div>
+                    <div class="underside_text_box_right">
+                        <p> Alle kan med fordel træne ju jitsu, fordi træningen hos os er tilpasset alder og
+                            modenhedsniveau. <br><br>
+                            Børnetræningen tager mere udgangspunkt i leg, men indeholder stadigvæk et element af
+                            disciplin - som er vores vigtiste sikkerhedsudstyr!
+                            Træningen vægtlægger desuden koncentration og selvbeherskelse, som jo er nyttig i andre
+                            sammenhænge.<br><br>
+                            Voksentræningen tager mere udgangspunkt i konkrete cituationer og problemstilinger, hvor vi
+                            samtid har det sjovt mens vi træner.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article id="beginners" class="article_underside">
+                <img class="billeder-phone" src="img/nybegyndereMobil.jpg" alt="ju jitsu undervisning">
+                <img class="billeder-desktop" src="img/nybegyndere.png" alt="ju jitsu undervisning">
+                <img class="redbox redbox_phone" src="img/redbox.png" alt="red box">
+                <div class="headline underside_img_text">
+                    <h2 class="h2_left">Til nybegyndere</h2>
+                    <p>“Alle kan være med”</p>
+                </div>
+                <div class="underside_text_box">
+                    <div class="underside_text_box_left">
+                        <p>Ju jitsu ER noget for dig!!<br>- Dig der vil gerne vil dyrke en meningsfuld form for motion,
+                            og ikke kun brænde kalorier af.<br><br>
+                            Igennem ju jitsu-træning vil du opnå bedre balance og bevægelighed, styrke og selvtillid,
+                            fokus og fysik. <br>
+                            Du kommer til at lære selvforsvarsfærdigheder, forbedre dig motorisk, og udvikle dig selv
+                            igennem læring og at blive udfordret af dig selv og andre.<br>
+                            Ju jitsu indeholder slag- og sparktræning, faldteknik, kast og nedtagninger, gulvkamp og
+                            sparring, frigørelser og kontrolgreb - og meget mere.
+                            Der er ingen krævende forudsætninger, og alle kan udvikle sig uafhængig af alder, køn og
+                            fysisk formåen.
+                            Træningen er lagt op til en gradvis opbygning af både kondition og teknik, og handler mindst
+                            lige meget om læring i fællesskab som det gør om kamp.
+                        </p>
+                    </div>
+                    <div class="underside_text_box_right">
+                        <p>I HØST IF Ju Jitsu træner vi ikke konkurrencerettet, men holder fokus på ren
+                            selvforsvarsteknik. Det er nemt at starte du møder bare op til holdets træningstid iført
+                            træningtøj eller noget der er nemt at bevæge sig i.<br><br>
+                            Ju jitsu handler om selvforsvar, motion og udvikling! Det skal være sjovt at træne ju jitsu,
+                            og det velegnet for alle, uafhængig af køn og alder.<br><br>
+                            Husk at det hvide nybegynderbælte allerede er en højere grad, end at sidde hjemme i sofaen
+                            eller foran computeren!
+                            Og med lidt ihærdighed er det ikke utænkelig at du har både fået gult og orange bælte til
+                            næste sommer!
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article id="history" class="article_underside">
+                <img class="billeder-phone" src="img/historieMobil.jpg" alt="ju jitsu undervisning">
+                <img class="billeder-desktop" src="img/historie.png" alt="ju jitsu undervisning">
+                <img class="redbox redbox_phone" src="img/redbox.png" alt="red box">
+                <div class="headline underside_img_text">
+                    <h2 class="h2_left">Ju Jitsu historie</h2>
+                    <p>“Japanske samuraikriger trænede Ju Jitsu”</p>
+                </div>
+                <div class="underside_text_box">
+                    <div class="underside_text_box_left">
+                        <p> Den historiske baggrund for ju jitsu er det kampsystem som den japanske samurai-kriger blev
+                            trænet i.<br>
+                            Foruden at beherske sværd, lanse, bue og andre våben, skulle en samurai desuden være i stand
+                            til at bekæmpe væbnede og ubevæbnede modstandere på slagmarken, mens de selv var
+                            ubevæbnede.<br><br>
+                            De forskellige familier og klaner udviklede forskellige teknikker og metoder, og holdt disse
+                            hemmelig for udenforstående.<br>
+                            Teknikkerne omfattet alle former for slag, spark, kast, nedtagninger, kvælninger og
+                            låsninger, og alt var naturligvis tilladt for at nedkæmpe sin modstander.<br><br>
+                            Efterhånden som Japan åbnede for handel og udveksling med Vesten, blev ju jitsu kendt
+                            udenfor Japan, først på Hawaii og derefter i USA, hvorefter det kom til England og resten af
+                            Europa.
+                        </p>
+                    </div>
+                    <div class="underside_text_box_right">
+                        <p>Mange andre kampsystemer med oprindelse i Japan, har sprunget ud af ju jitsu. <br><br>
+                            Der findes historiske spor efter ju jitsu så langt tilbage som ca. år 700.<br>
+                            Karate er en træningsform der fokuserede primært på slag- og sparkteknikker, der udviklede
+                            sig fra ju jitsu på 1800-og 1900-tallet, specielt på øen Okinawa, hvor man desuden blev
+                            inspireret af kinesiske kampsystemer.<br><br>
+                            Judo er også udviklet fra ju jitsu i nogenlunde det samme tidsrum som karate, af udøvere der
+                            ville fokusere på kaste- og låseteknikker.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="underside_bottm">
+                <!-- <button id="to-top">Tilbage til toppen</button> -->
+                <ul class="left_naviagtin_page nav-container">
+                    <li class="left-nav">
+                        <a href="#so_easya" class="laft-nav-link">Så nemt er det</a>
+                    </li>
+                    <li class="left-nav">
+                        <a href="#advantage" class="laft-nav-link">Fordele</a>
+                    </li>
+                    <li class="left-nav">
+                        <a href="#beginners" class="laft-nav-link">Til nybegyndere</a>
+                    </li>
+                    <li class="left-nav">
+                        <a href="#history" class="laft-nav-link">Historien</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- ====================================== Praktisk info Page ====================================== -->
+    <!--Skrevet af Line, Lise-May og Chalotte -->
+
+        <section id="practical_information" class="page page_underside">
+            <h1 class="center">Praktisk information</h1>
+            <article id="trial_training" class="article_top_underside article_underside">
+                <img class="billeder-phone" src="img/tryOutPracticalMobile.png" alt="ju jitsu undervisning">
+                <img class="billeder-desktop" src="img/tryOutPractical.png" alt="ju jitsu undervisning">
+                <img class="redbox redbox_phone" src="img/redbox.png" alt="red box">
+                <div class="headline underside_img_text">
+                    <h2 class="h2_left">Prøvetræning</h2>
+                    <p>“Vi glæder os til at se dig!”</p>
+                </div>
+                <div class="underside_text_box">
+                    <div class="underside_text_box_left">
+                        <p>Har du lyst til at prøve kræfter med Ju Jitsu?
+                            Vi tilbyder selvfølgelig en udforpligtende og gratis prøvetræning til alle, der har lyst til
+                            at kaste sig ud i det. <br><br>
+                            Du er altid velkommen til at møde op om tirsdagen til det pågældende holds træningstid, som
+                            du kan se nedenfor.
+                            Har du nogle spørgsmål inden kan du kontakte os på vores mail: Hadbjerg.jujitsu@gmail.com
+                            eller på vores kontaktformular her på siden.
+                        </p>
+                    </div>
+                    <div class="underside_text_box_right">
+                        <p>
+                            Ungdomsholdet og voksenholdet træner om - hvis muligt - to gange ugentligt, derfor opfordre
+                            vi til at prøvetræningen falder på en tirsdag. <br><br>
+                            Vi anbefaler desuden, at du møder op i sportstøj eller noget tøj der er nemt at bevæge dig
+                            i, helst et par lange bukser. Hvis du har langt hår kan
+                            det med fordel sættes op i en hestehale, fletning, knold eller lignende.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article id="teams_and_prices" class="article_underside">
+                <h2 class="h2-black">Hold og priser</h2>
+                <div class="hold">
+                    <div>
+                        <a href="#/404"><img class="hold-billeder hold-billeder_underside" src="img/barnshold.png"
+                                alt="ju jitsu"></a>
+                        <h3 class="holdnavn holdnavn_underside">Børnehold <br> 6-13 år</h2>
+                            <div class="times">
+                                <h3 class="h3_left">Børnehold</h3>
+                                <p>Tirsdag: 17:00 - 18:00</p>
+                            </div>
+
+                    </div>
+                    <div>
+                        <a href="#/404"><img class="hold-billeder hold-billeder_underside" src="img/ungdomshold.png"
+                                alt="ju jitsu"></a>
+                        <h3 class="holdnavn holdnavn_underside">Ungdomshold <br> 14-15 år</h3>
+                        <div class="times">
+                            <h3 class="h3_left">Ungdomshold</h3>
+                            <p>Tirsdag: 18:00 - 19:15</p>
+                            <p>Torsdag: 20:00 - 21:30</p>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#/404"><img class="hold-billeder hold-billeder_underside" src="img/voksenhold.png"
+                                alt="ju jitsu"></a>
+                        <h3 class="holdnavn holdnavn_underside">Voksenhold <br> 16+ år</h3>
+                        <div class="times">
+                            <h3 class="h3_left">Voksenhold</h3>
+                            <p>Tirsdag: 18:00 - 19:15</p>
+                            <p>Torsdag: 20:00 - 21:30</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="underside_text_box">
+                    <div class="underside_text_box_left">
+                        <p>Vi har tre Ju Jitsu hold, fordelt på to dage. Alle holdene der har vi fokus på den enkelte,
+                            derfor kan alle træne med.<br><br>
+                            Vi har et børnehold i alderen 6-13 år, der træner én gang i ugen hver tirsdag, hvor de både
+                            lære teknikker og samtidig har fokus på at have det sjovt.
+                        </p>
+                    </div>
+                    <div class="underside_text_box_right">
+                        <p> Ungdomsholdet i alderen 14-15 år og voksenholdet 16+ år træner på samme tid og træner to
+                            gange i ugen hver tirsdag og torsdag.
+                            Her træners der lidt mere intenst ud fra mange forskellige situationer.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article id="equipment" class="article_underside">
+                <img class="billeder-phone" src="img/udstyrMobil.jpg" alt="ju jitsu undervisning">
+                <img class="billeder-desktop" src="img/udstyr.png" alt="ju jitsu undervisning">
+                <img class="redbox redbox_phone" src="img/redbox.png" alt="red box">
+                <div class="headline underside_img_text">
+                    <h2 class="h2_left">Udstyr</h2>
+                    <p>“Dragt og et bælte”</p>
+                </div>
+                <div class="underside_text_box">
+                    <div class="underside_text_box_left">
+                        <p>Ju jitsu-træning kræver grundlæggende ikke meget udstyr <br>
+                            - alt du skal bruge er en dragt (også kaldte Gi) og et bælte.<br><br>
+                            Ungdomsholdet og voksenholdet benytter dog handsker og tandbeskytter til nogle
+                            træninger.<br><br>
+                            Både Gi og andet udstyr kan købes igennem Sensei, da vi har en fordelagtig indkøbsaftale med
+                            BudoXperten, som er en af Danmarks største forhandlere af kampsportsudstyr.<br><br>
+                            Typisk samler vi alle bestillinger således, at man kan deles om fragtudgifterne. Men det er
+                            til enhver tid mulig at bestille udstyr.
+                        </p>
+                    </div>
+                    <div class="underside_text_box_right">
+                        <p> Den Gi, vi anbefaler vores nybegyndere er Budo Nord Empi, som fås i intervaller 100cm -
+                            210cm.
+                            En mere robust dragt er Budo Nord Shogun, som er mere kraftig i konstruktionen, uden at være
+                            tyk og tung som en fx en judodragt. <br><br>
+                            <b>Første træning</b><br><br>
+                            Du behøver ingen dragt for at komme og prøve ju jitsu, du kan blot nøjes med et par lange
+                            træningsbukser på, og en t-shirt. Dog er en Ju Jitsu-Gi langt det mest behagelige - og
+                            holdbare - at træne i på længere sigt.
+
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article id="rules_of_order" class="article_underside">
+                <h2>Prøvetræning</h2>
+
+                <ul class="liste">
+                    <li class="rules_list">Buk til måtten når du træder ind på, og ud af den. Buk ligeledes til
+                        træningspartner før og efter teknikker, og til instruktør.</li>
+                    <li class="rules_list">Adlyd altid straks instruktøren, vær opmærksom på hvad der bliver sagt.</li>
+                    <li class="rules_list">Smykker, ure og andet skal tages af inden træning, da det kan skade dig selv
+                        eller andre under træning.</li>
+                    <li class="rules_list">Træningen foregår i bare tær</li>
+                    <li class="rules_list">Forlad ikke træningen, eller træd ind i en igangværende træning, uden at tale
+                        med instruktøren.</li>
+                    <li class="rules_list">Der må ikke bandes under træning, og man skal tale ordentlig tilhinanden.
+                    </li>
+                    <li class="rules_list">Har du langt år skal det sættes op.</li>
+                    <li class="rules_list">Respekter altid træningspartners klap ved lædlåse, kvælninge og
+                        tryk/smærtepunkter – stop, og slip!</li>
+                </ul>
+            </article>
+
+            <article class="underside_bottm">
+                <!-- <button id="to-top">Tilbage til toppen</button> -->
+                <ul class="left_naviagtin_page nav-container">
+                    <li class="left-nav">
+                        <a href="#trial_training" class="laft-nav-link">prøvetræning</a>
+                    </li>
+                    <li class="left-nav">
+                        <a href="#teams_and_prices" class="laft-nav-link">Hold og priser</a>
+                    </li>
+                    <li class="left-nav">
+                        <a href="#equipment" class="laft-nav-link">Udstyr</a>
+                    </li>
+                    <li class="left-nav">
+                        <a href="#rules_of_order" class="laft-nav-link">Ordensregler</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- ====================================== 404 Page ====================================== -->
+    <!--Skrevet af Chalotte -->
+
+        <section id="page-404" class="page">
+            <h1 class="h1-404">Fejl - 404</h1>
+            <h2 class="h2-404">Denne side er endnu ikke oprettet</h2>
+            <img src="img/404.png" alt="meditation" class="billede-404">
+            <h2 class="h2-404">Tag en dyb indånding og <a class="link" href="javascript:history.back()">hop et skridt
+                    tilbage</a></h2>
+        </section>
+    </main>
+
+    <!-- ====================================== FOOTER ====================================== -->
+    <!--Skrevet af Lise-May -->
+
+    <footer>
+        <section class="footer_section">
+            <article class="partner article_footer">
+                <p class="p_footer">Samarbejdspartner</p>
+                <img href="http://jujitsunorge.com/" src="img/JJN-logo.png" alt="HØST IF logo" class="partner_img_JJN">
+                <img href="https://xn--hstif-vua.dk/" src="img/IF-logo.png" alt="HØST IF logo" class="partner_img_IF">
+            </article>
+            <article class="footer_some article_footer">
+                <img href="#" src="img/fb-icon.png" alt="Facebook logo" class="fb_img">
+                <p class="p_footer">HØST IF Ju Jitsu</p>
+            </article>
+            <article class="footer_find article_footer">
+                <p class="p_footer">Mejsevej 1, Hadbjerg,<br>8370 Hadsten<br>HØST-hallen</p>
+                <p class="p_footer p_mail">Hadbjerg.jujitsu@gmail.com</p>
+            </article>
+        </section>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.js"></script>
+    <script src="./js/app.js" type="module"></script>
+</body>
+
+</html>
